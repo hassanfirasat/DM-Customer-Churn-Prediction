@@ -1,0 +1,12 @@
+MC = monthly charges
+TC = Total Charges
+
+		MC		TC
+mean = array([  64.79820819, 2283.30044084])
+std = array([  30.08383459, 2266.61018071])
+
+The standard score of a sample x is calculated as:
+
+z = (x - u) / s
+
+where u is the mean of the training samples or zero if with_mean=False, and s is the standard deviation of the training samples or one if with_std=False.

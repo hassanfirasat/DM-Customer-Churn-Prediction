@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background: linear-gradient(to right, #273746, #000000e3);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/predict">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+                <a class="navbar-brand" href="/predict">Predicting Churned Customers - Admin</a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link {% block predict_active %}{% endblock %}" href="/predict">Predict</a>
+                    <a class="nav-item nav-link {% block logout_active %}{% endblock %}" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+
+    <section>
+        {% block content %} {% endblock %}
+    </section>
+</body>
+
+</html>

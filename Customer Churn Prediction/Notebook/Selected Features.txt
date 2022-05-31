@@ -1,0 +1,12 @@
+DeviceProtection_No                    
+OnlineBackup_No                         
+StreamingTV_No internet service         
+StreamingMovies_No internet service     
+TechSupport_No internet service         
+OnlineSecurity_No internet service      
+InternetService_No                      
+tenure_group_61 - 72                   
+PaymentMethod_Electronic check                            
+Contract_Two year                       
+                   
+             

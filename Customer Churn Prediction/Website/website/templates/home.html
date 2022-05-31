@@ -1,0 +1,221 @@
+{% extends "base.html" %} {% block title %} Predicting Churn Customers {% endblock %} {% block breadcrumb %} Home {% endblock %} {% block home_active %}active{% endblock %} {% block content %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center bg-dark mt-0">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                <h1>Better Solutions For Your Business</h1>
+                <h2>Churn prediction is becoming a major focus of business who wish to retain customers by satisfying their needs under resource constraints. </h2>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <a href="/admin" class="btn-get-started scrollto">Get Started</a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="{{ url_for('static', filename='img/hero-img.png') }}" class="img-fluid animated" alt="">
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+        <div class="container-fluid mt-5" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Why us?</h2>
+                <p>Our predictive model is capabale of predicting probabilities of customers that are about to churn in an effective , fast and reliable way.</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+                    <div class="content">
+                        <h3>Customer churn prediction models aim to detect <strong>customers with a high probabily of churn</strong></h3>
+                        <p>
+                            Predictive accuracy, comprehensibility, and justifiability are three key aspects of a churn prediction model.
+                        </p>
+                    </div>
+
+                    <div class="accordion-list">
+                        <ul>
+                            <li>
+                                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> How our model works? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                                    <p>
+                                        Our model is trained on existed data of customers that are churned because of some reason. By using customer information it predicts the probabiliy from patterns.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Is our model is free to use? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        This is a beta version of predictive model so you can use it as you want.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> How can I use this model? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        In order to use our services you have to be a member. To become a member contact our administration from About us page.
+                                    </p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("/static/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Why Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+        <div class="container mt-5 mb-5" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Services</h2>
+                <p>Our Web App provides four very important services for our customers that are mentioned below</p>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                        <h4><a href="#">Accurate Patterns</a></h4>
+                        <p>Our model is trained on best and selective patterns for predictions.</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4><a href="#">Detailed Report</a></h4>
+                        <p>User can view detail report about their customers.</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-tachometer"></i></div>
+                        <h4><a href="#">Performance</a></h4>
+                        <p>our model works very efficiently in providing results.</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-layer"></i></div>
+                        <h4><a href="#">Insights</a></h4>
+                        <p>User can be able to view insights of provided datasets.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Services Section -->
+
+
+
+
+</main>
+<!-- End #main -->
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="bg-dark">
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>IQRA University</h3>
+                    <p>
+                        Shaheed-e-Millat Rd, Defence view Phase 2<br> Defence View Housing Society<br> Karachi, Karachi City, Sindh 75500 <br><br>
+                        <strong>Phone:</strong> 021 - 123456789<br>
+                        <strong>Email:</strong> email@iqra.edu.pk<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/admin">Admin</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="about">About us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p>Feel free to follow us on social media platforms.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://twitter.com/diidynamo" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="https://www.facebook.com/hassansparkii/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://github.com/hassanfirasat" class="instagram"><i class="bx bxl-github"></i></a>
+                        <a href="https://www.linkedin.com/in/hassanfirasat/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+        <div class="copyright">
+            &copy; Copyright <strong><span>IQRA University</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+            <p class="text-white">Designed by <strong>Hassan Firasat</strong> </p>
+        </div>
+
+
+
+    </div>
+</footer>
+<!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/waypoints/noframework.waypoints.js') }}"></script>
+
+<!-- Template Main JS File -->
+<script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,205 @@
+{% extends "base2.html" %} {% block title %} Predicting Churn Customers {% endblock %} {% block predict_active %}active{% endblock %} {% block content %}
+
+<div class="d-flex justify-content-center" id="predict_main">
+    <div class="container pt-2" id="predict_options">
+        <form method="POST">
+            <div class="row">
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Device Protection</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="dp">
+                        <option selected disabled>Select</option>
+                        <option value="1">No</option>
+                        <option value="2">Yes</option>
+                        <option value="3">No internet service</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Online Backup</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="ob">
+                        <option selected disabled>Select</option>
+                        <option value="1">No</option>
+                        <option value="2">Yes</option>
+                        <option value="3">No internet service</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Streaming TV</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="st">
+                        <option selected disabled>Select</option>
+                        <option value="1">No</option>
+                        <option value="2">Yes</option>
+                        <option value="3">No internet service</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Streaming Movies</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="sm">
+                        <option selected disabled>Select</option>
+                        <option value="1">No</option>
+                        <option value="2">Yes</option>
+                        <option value="3">No internet service</option>
+                      </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Tech Support</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="ts">
+                        <option selected disabled >Select</option>
+                        <option value="1">No</option>
+                        <option value="2">Yes</option>
+                        <option value="3">No internet service</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Online Security</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="os">
+                        <option selected disabled>Select</option>
+                        <option value="1">No</option>
+                        <option value="2">Yes</option>
+                        <option value="3">No internet service</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Internet Service</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="ins">
+                        <option selected disabled>Select</option>
+                        <option value="1">No</option>
+                        <option value="2">DSL</option>
+                        <option value="3">Fiber optic</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Payment Method</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="pm">
+                        <option selected disabled>Select</option>
+                        <option value="1">Electronic check</option>
+                        <option value="2">Mailed check</option>
+                        <option value="3">Bank transfer (automatic)</option>
+                        <option value="4">Credit card (automatic)</option>
+                      </select>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Contract</label>
+                    </div>
+                    <div class="row">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="c">
+                        <option selected disabled>Select</option>
+                        <option value="1">Month-to-month</option>
+                        <option value="2">One Year</option>
+                        <option value="3">Two Year</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Tenure</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" class="form-control-sm" placeholder="months" name="t">
+                    </div>
+                </div>
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Monthly Charges</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" class="form-control-sm" placeholder="0.00" name="mc">
+                    </div>
+                </div>
+                <div class="col p-3 bg-dark text-white">
+                    <div class="row">
+                        <label class="p-0">Total Charges</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" class="form-control-sm" placeholder="0.00" name="tc">
+                    </div>
+                </div>
+            </div>
+            <div class="row bg-dark p-0" style="height: 60px;">
+                <button type="submit" name="submit" class="btn btn-warning btn-lg">Predict Probability of Churn</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="container mt-5" id="predict_result">
+        <div class="row">
+            <div class="col bg-dark text-white m-1" style="height: 180px;">
+                <div class="d-flex justify-content-center align-items-center m-1 text-center">
+                    <div class="row">
+                        <div class="container">
+                            <h4>Probability of Churn </h4>
+                        </div>
+                        <div class="container mt-4 text-warning">
+                            <h4> {{ error }}</h4>
+                            <h1>{{ prob_in_str }} </h1>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col bg-dark text-white m-1" style="height: 180px;">
+                <div class="d-flex justify-content-center align-items-center m-1">
+                    <div class="container-gauge">
+                        <div class="gauge-a"></div>
+                        <div class="gauge-b"></div>
+                        <div class="gauge-c" style="transform: rotate({{deg}}deg);"></div>
+                        <div class="gauge-data">
+                            <h3 id="percent">{{ prob_in_str }}%</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}
